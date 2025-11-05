@@ -395,24 +395,28 @@ tr:nth-child(even) {
 }
 
 .btn {
-  display: inline-block;
   margin: 10px;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  text-align: center;
 }
 
 .btn-primary {
-  background-color: #3949ab;
+  display: inline-block;
+  background: linear-gradient(135deg, #5f8eff, #3b68ff);
   color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 12px 30px;
   border: none;
+  border-radius: 999px; /* pill shape */
+  transition: all 0.3 ease;
+  box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: #283593;
-  transform: translateY(-2px)
+  background: linear-gradient(135deg, #507cfb, #3359f5);
+  box-shadow: 0 6px 14px rgba(59, 104, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .section.container {
