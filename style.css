@@ -391,7 +391,7 @@ tr:nth-child(even) {
 .section-container h2 {
   text-align: center;
   font-size: 32px; 
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Nunito Sans', sans-serif;
   margin-bottom: 15px;
   color: #fff
 }
