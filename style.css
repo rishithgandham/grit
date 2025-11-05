@@ -877,3 +877,10 @@ a{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* "Pressed" shadow effect */
   transform: translateY(0);
 }
+
+
+.core_values {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+}
