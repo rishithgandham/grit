@@ -13,9 +13,11 @@
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 600px at 80% -10%, rgba(90,167,255,.12), transparent),radial-gradient(1200px 600px at -10% 10%, rgba(123,255,192,.08), transparent),var(--bg);line-height:1.6}
     a{color:var(--primary);text-decoration:none}
     a:hover{color:var(--primary-2)}
+    .brand-logo {height: 40px;}
     .container{width:min(1100px,92vw);margin:0 auto}
     header{position:sticky;top:0;z-index:40;background:rgba(11,16,32,.7);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.06),0 10px 30px rgba(0,0,0,.2)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .CITlogo {width: 55px;height: 55px;object-fit: cover;border-radius: 50%;position: absolute;top: 50%;right: 0;transform: translateY(-50%);margin-right: 100px;}
+    .nav {position: relative;display:flex;align-items:center;justify-content:flex-start;padding:0 12px;height:70px}
     .brand{font-weight:700;letter-spacing:.3px}
     .nav-links{display:flex;gap:16px;flex-wrap:wrap}
     .nav-links a{color:var(--muted);font-weight:500;padding:8px 10px;border-radius:10px}
@@ -46,11 +48,11 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">GRIT Conference</div>
+      <a href="./index.html"><img src="./Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
       <nav class="nav-links">
         <a href="./index.html">Home</a>
         <a href="./citpage.html">About CIT</a>
-        <a href="./core_values.html">Core ValuesT</a>
+        <a href="./core_values.html">Core Values</a>
         <div class="dropdown">
           <button>Interviews ▾</button>
           <div class="menu">
@@ -81,9 +83,12 @@
           </div>
         </div>
         <a href="./iContactUs.html">Contact</a>
-        <a href="https://teachers.henrico.k12.va.us/deeprun/cit/" target="_blank">CIT</a>
-      </nav>
-    </div>
+      </div>
+          <a href="https://informationtechnology.henricoschools.us/" target="_blank">
+          <img src="citlogo.png" alt="CIT logo" class = "CITlogo">
+          </a>
+        </nav>
+      </div>
   </header>
   
   <section class="hero">
@@ -106,8 +111,8 @@
           <a href="https://informationtechnology.henricoschools.us/o/informationtechnology/page/curriculum/" target="_blank" class="button">Learn more about the CIT curriculum</a>
         </div>
         <div class="card">
-          <h2>Student Work Showcase</h2>
-          <iframe src="https://docs.google.com/presentation/d/1bt8iSKbbq5IW7OBire5kV24pLzrBDSZIuV5b4CWPYd4/present?usp=sharing" width="100%" height="450" allowfullscreen></iframe>
+          <h2> Student Work </h2>
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQz8wIC4Hy_j7F5JZsG-z0G_CKkwANipMZM-8iQX-c6qWMrL_ceofcexHcOvP5lcw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
         <div class="card">
           <h2>Community & Experience</h2>
