@@ -42,8 +42,8 @@
       box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.2);
     }
     .brand-logo {height: 40px;}
-    .CITlogo {width: 55px;height: 55px;object-fit: cover;border-radius: 50%;position: absolute;top: 50%;right: 0;margin-right: 100px;}
-    .nav {position: relative;display:flex;align-items:center;justify-content:flex-start;padding:0 12px;height:70px}
+    .CITlogo {width: 40px;height: 40px;object-fit: contain;border-radius: 50%;position: static;display:block;}
+    .nav {position: relative;display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:70px}
     .nav-left { display: flex; align-items: center; gap: 14px; }
     .brand-logo {
       height: 40px; max-height: 40px; width: auto;
@@ -131,14 +131,17 @@
       margin-left: 16px;
     }
     
-    .CITlogo {
-      position: static;
-      margin: 0;
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 50%;
-
+    .nav-toggle{
+      display:none;
+      background:transparent;
+      border:none;
+      font-size:1.8rem;
+      cursor:pointer;
+      padding:4px 8px;
+    }
+    .nav-toggle:focus-visible{
+      outline: 2px solid var(--primary);
+      border-radius: 4px;
     }
 
     @media (max-width:768px){
@@ -151,31 +154,28 @@
         height:auto;
         }
         .nav-toggle {
-          display: none;
-          background: transparent;
-          border: none;
-          font-size: 1.8rem;
-          cursor: pointer;
-          padding: 4px 8px;
+          order: 3;
+          display: block;
+          margin-left: auto;
         }
         .nav-toggle:focus-visible {
           outline: 2px solid var(--primary);
           border-radius: 4px;
        }
       .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.97);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 16px 10px;
-        gap: 6px;
-        display: none;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        z-index: 50;
-      }
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.97);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 8px 16px 10px;
+      gap: 6px;
+      display: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      z-index: 50;
+    }
       .nav.nav-open .nav-links {
         display: flex;
       }
@@ -269,10 +269,11 @@
         <a href="./iContactUs.html">Contact</a>
       </nav>
       <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="CITpicture">
-        <img src="citlogo.png" alt="CIT logo" class = "CITlogo">
+          <img src="citlogo.png" alt="CIT logo" class = "CITlogo">
         </a>
-  </div>
-</header>
+    </div>
+  </header>
+
   <section class="hero">
     <div class="container hero-inner">
       <div>
