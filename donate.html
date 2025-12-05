@@ -53,19 +53,26 @@
 }
 
 .nav {
-      position: relative;
       display:flex;
       align-items:center;
-      justify-content:flex-start;
-
-      height:70px
+      justify-content:space-between;
+      gap: 16px;
+      padding:8px 12px;
+      height:auto;
+    }
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    .nav-toggle:focus-visible {
+      outline: 2px solid var(--primary);
+      border-radius: 4px;
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
     .brand-logo {
       height: 40px; max-height: 40px; width: auto;
     }
