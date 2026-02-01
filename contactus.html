@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – GRIT Conference</title>
+  <link rel="icon" type="image/png" href="images/Logo+Option+1..png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/citpage.css">
+  <link rel="stylesheet" href="css/contactus.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="./index.html"><img src="images/Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./citpage.html">About CIT</a>
+        <a href="./schedule.html">Schedule</a>
+        <div class="dropdown">
+          <button>Interviews ▾</button>
+          <div class="menu">
+            <a href="./guestinterviews.html">Guest Interviews from 2023</a>
+            <a href="./studentinterviews.html">Student Interviews from 2023</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Get Involved ▾</button>
+          <div class="menu">
+            <a href="./volunteer.html">Volunteer</a>
+            <a href="./donate.html">Donate</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Media ▾</button>
+          <div class="menu">
+            <a href="./photos.html">Photos from 2023</a>
+            <a href="./videos.html">Videos from 2023</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Featured ▾</button>
+          <div class="menu">
+            <a href="./2026colleges.html">Colleges from 2026</a>
+            <a href="./2026speakers.html">Speakers from 2026</a>
+            <a href="./featuredcolleges.html">Colleges from 2023</a>
+            <a href="./featuredspeakers.html">Speakers from 2023</a>
+            <a href="./featuredsponsor.html">Sponsors from 2023</a>
+            <a href="./vendor_hall_orgs.html">2023 Vendor Hall</a>
+          </div>
+        </div>
+        <a href="./contactus.html">Contact</a>
+      </nav>
+      <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="CITpicture">
+        <img src="images/citlogo.png" alt="CIT logo" class="CITlogo">
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Reach the CIT team at Deep Run High School.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <h2>Office Phone</h2>
+            <div class="muted">804-364-8000</div>
+            <div class="stack">
+              <a class="button" href="tel:8043648000">Call</a>
+            </div>
+          </div>
+
+          <div class="card contact-card">
+            <h2>Program Contact</h2>
+            <div class="muted">Ms. Norris · lmnorris@henrico.k12.va.us</div>
+            <div class="stack">
+              <a class="button" href="mailto:lmnorris@henrico.k12.va.us">Email Ms. Norris</a>
+            </div>
+          </div>
+
+          <div class="card contact-card">
+            <h2>Address</h2>
+            <div class="muted">Deep Run High School<br>4801 Twin Hickory Road<br>Glen Allen, Virginia 23059</div>
+            <div class="stack">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=4801+Twin+Hickory+Road+Glen+Allen+Virginia+23059" target="_blank" rel="noopener">Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps?q=4801+Twin+Hickory+Road+Glen+Allen+Virginia+23059&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Map to Deep Run High School">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> GRIT Conference · Authors: Tanushree S, Shlok J, Aditi I, Zainab S, Hunter C, Caleb T</div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    if (nav && navToggle) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

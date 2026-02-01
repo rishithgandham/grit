@@ -1,244 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Volunteer – GRIT Conference · About CIT</title>
-  <link rel="icon" type="image/png" href="./Logo+Option+1..png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --panel: #ffffff;
-      --panel-2: #ffffff;
-      --text: #000000;
-      --muted: #000000;
-      --primary: #5aa7ff;
-      --primary-2: #3f8bff;
-      --accent: #7bffc0;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --radius: 16px;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(90,167,255,.12), transparent),
-                  radial-gradient(1200px 600px at -10% 10%, rgba(123,255,192,.08), transparent),
-                  var(--bg);
-      line-height: 1.6;
-    }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { color: var(--primary-2); }
-    img { max-width: 100%; display: block; }
-    .container { width: min(1100px, 92vw); margin: 0 auto; }
-    header {
-      position: sticky; top: 0; z-index: 40;
-      background: #ffffff(11,16,32,0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .brand-logo {height: 40px;}
-    .CITlogo {width: 40px;height: 40px;object-fit: contain;border-radius: 50%;position: static;display:block;}
-    .nav {position: relative;display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:70px}
-    .nav-left { display: flex; align-items: center; gap: 14px; }
-    .brand-logo {
-      height: 40px; max-height: 40px; width: auto;
-    }
-    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
-    .nav-links a { color: var(--muted); font-weight: 500; padding: 8px 10px; border-radius: 10px; }
-    .nav-links a:hover, .nav-links a:focus { background: rgba(255,255,255,0.06); color: var(--text); outline: none; }
-    .dropdown { position: relative; }
-    .dropdown > button {
-      background: transparent; border: 0; color: var(--muted); font: inherit; cursor: pointer;
-      padding: 8px 10px; border-radius: 10px; display: inline-flex; align-items: center; gap: 6px;
-    }
-    .dropdown > button:hover, .dropdown > button:focus { background: rgba(255,255,255,0.06); color: var(--text); outline: none; }
-    .menu { position: absolute; top: calc(100%); left: 0; min-width: 220px;
-      background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 8px;
-      box-shadow: var(--shadow); display: none;
-    }
-    .menu a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--muted); }
-    .menu a:hover { background: rgba(255,255,255,0.06); color: var(--text); }
-    .dropdown:focus-within .menu, .dropdown:hover .menu { display: block; }
-    .hero {
-      padding: 56px 0 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: radial-gradient(800px 300px at 20% 0%, rgba(90,167,255,.10), transparent), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
-    }
-    .hero-inner { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
-    .hero h1 { font-size: clamp(28px, 4.5vw, 44px); line-height: 1.1; margin: 0 0 12px; }
-    .hero p { margin: 0 0 20px; color: var(--muted); }
-    .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .btn { display: inline-block;
-  background: linear-gradient(135deg, #5f8eff, #3b68ff);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 999px; /* pill shape */
-  transition: all 0.3 ease;
-  box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3);}
-    .btn:active { transform: translateY(1px); }
-    .btn-primary { display: inline-block;
-  background: linear-gradient(135deg, #5f8eff, #3b68ff);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 999px; /* pill shape */
-  transition: all 0.3 ease;
-  box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3); }
-    .btn-primary:hover {background: linear-gradient(135deg, #507cfb, #1947ff);
-  box-shadow: 0 6px 14px rgba(59, 104, 255, 0.4);
-  transform: translateY(-2px);color: white;}
-    .btn-ghost {display: inline-block;
-  background: linear-gradient(135deg, #5f8eff, #3b68ff);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 999px; /* pill shape */
-  transition: all 0.3 ease;
-  box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3);}
-    .btn-ghost:hover {background: linear-gradient(135deg, #507cfb, #1947ff);
-  box-shadow: 0 6px 14px rgba(59, 104, 255, 0.4);
-  transform: translateY(-2px);color: white;}
-    .card { background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
-    .grid { display: grid; gap: 18px; }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    footer { margin-top: 40px; padding: 28px 0 44px; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.08); text-align: center; }
-  
-    .CITpicture {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #ffffff;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-      margin-left: 16px;
-    }
-    
-    .nav-toggle{
-      display:none;
-      background:transparent;
-      border:none;
-      font-size:1.8rem;
-      cursor:pointer;
-      padding:4px 8px;
-    }
-    .nav-toggle:focus-visible{
-      outline: 2px solid var(--primary);
-      border-radius: 4px;
-    }
-
-    @media (max-width:768px){
-      .nav {
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        gap: 16px;
-        padding:8px 12px;
-        height:auto;
-        }
-        .nav-toggle {
-          order: 3;
-          display: block;
-          margin-left: auto;
-        }
-        .nav-toggle:focus-visible {
-          outline: 2px solid var(--primary);
-          border-radius: 4px;
-       }
-      .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.97);
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 8px 16px 10px;
-      gap: 6px;
-      display: none;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      z-index: 50;
-    }
-      .nav.nav-open .nav-links {
-        display: flex;
-      }
-      .nav-links a, .dropdown > button {
-        width: 100%;
-        text-align: left;
-        padding: 6px 0;
-      }
-      .brand-logo {
-        order: 1;
-      }
-      .CITpicture {
-        order: 2;
-        display: flex;
-        margin-left: 8px
-      }
-
-      .dropdown {
-        width: 100%;
-      }
-
-      .dropdown > button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .dropdown .menu {
-        position: static;
-        min-width: 0;
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        padding: 0 0 4px 16px;
-        border-radius: 0;
-      }
-      .dropdown .menu a {
-        padding: 4px 0;
-      }
-      .countdown-container p {
-        font-size: 75%;
-      }
-      #countdown-timer {
-        font-size: 100%;
-      }
-    }
-  </style>
+  <title>Volunteer – GRIT Conference</title>
+  <link rel="icon" type="image/png" href="images/Logo+Option+1..png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/citpage.css">
+  <link rel="stylesheet" href="css/volunteer.css">
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a href="./index.html"><img src="./Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
-        ☰
-    </button>
+      <a href="./index.html"><img src="images/Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
       <nav class="nav-links">
         <a href="./index.html">Home</a>
         <a href="./citpage.html">About CIT</a>
-        <a href="./core_values.html">Core Values</a>
+        <a href="./schedule.html">Schedule</a>
         <div class="dropdown">
           <button>Interviews ▾</button>
           <div class="menu">
-            <a href="./Interviews_Guest.html">Guest Interviews from 2023</a>
-            <a href="./Interviews_Students.html">Student Interviews from 2023</a>
+            <a href="./guestinterviews.html">Guest Interviews from 2023</a>
+            <a href="./studentinterviews.html">Student Interviews from 2023</a>
           </div>
         </div>
         <div class="dropdown">
@@ -251,8 +36,8 @@
         <div class="dropdown">
           <button>Media ▾</button>
           <div class="menu">
-            <a href="./iPhotos.html">Photos from 2023</a>
-            <a href="./iVideos.html">Videos from 2023</a>
+            <a href="./photos.html">Photos from 2023</a>
+            <a href="./videos.html">Videos from 2023</a>
           </div>
         </div>
         <div class="dropdown">
@@ -266,64 +51,66 @@
             <a href="./vendor_hall_orgs.html">2023 Vendor Hall</a>
           </div>
         </div>
-        <a href="./iContactUs.html">Contact</a>
+        <a href="./contactus.html">Contact</a>
       </nav>
       <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="CITpicture">
-          <img src="citlogo.png" alt="CIT logo" class = "CITlogo">
-        </a>
+        <img src="images/citlogo.png" alt="CIT logo" class="CITlogo">
+      </a>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container hero-inner">
-      <div>
-        <h1>Volunteer at the GRIT Conference</h1>
-        <p>Join students, educators, and community leaders to make this year’s event our best yet. Sign up in under two minutes—roles for all skill sets and schedules.</p>
-        <!--<div class="cta">
-          <a class="btn btn-primary" href="https://forms.gle/hqbBTf99keHApRzr7" target="_blank">Sign Up to Volunteer</a>
-          <a class="btn btn-ghost" href="#details">See roles & details</a>-->
-        </div>
-      </div>
+    <div class="container">
+      <h1>Volunteer at the GRIT Conference</h1>
+      <p>Join students, educators, and community leaders to make this year's event our best yet. Sign up in under two minutes—roles for all skill sets and schedules.</p>
     </div>
   </section>
-  <main id="main">
-    <section id="details">
-      <div class="container grid grid-3">
-        <div class="card">
-          <h3>Make an impact</h3>
-          <p>Help showcase innovation at Deep Run’s Center for Information Technology and support a smooth, welcoming experience for attendees.</p>
-        </div>
-        <div class="card">
-          <h3>Flexible shifts</h3>
-          <p>Morning, afternoon, and full-day shifts available along with options to help with set-up and breakdown.</p>
-      </div>
-    </section>
-    <section>
+
+  <main>
+    <section class="section volunteer-section" id="details">
       <div class="container">
-        <div class="" style="text-align:center">
-          <p style="margin:20px">Ready to help?</p>
-          <a class="btn btn-primary" href="https://forms.gle/hqbBTf99keHApRzr7" target="_blank">Sign Up to Volunteer</a>
-          <div style="margin: 10px; font-size:.95rem; color:var(--muted)">The form opens in a new tab.</div>
+        <div class="volunteer-grid">
+          <div class="card">
+            <h2>Make an impact</h2>
+            <p>Help showcase innovation at Deep Run's Center for Information Technology and support a smooth, welcoming experience for attendees.</p>
+          </div>
+          <div class="card">
+            <h2>Flexible shifts</h2>
+            <p>Morning, afternoon, and full-day shifts available along with options to help with set-up and breakdown.</p>
+          </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="container grid grid-2">
-        <div class="card">
-          <h3>Contact</h3>
-          <p>Office Phone Number: <a href="tel:+18043466343">(804) 364-8000</a><br>Ms. Norris: <a href="mailto:lmnorris@henrico.k12.va.us">lmnorris@henrico.k12.va.us</a></p>
-        </div>
-        <div class="card">
-          <h3>Location</h3>
-          <p>Deep Run High School<br>4801 Twin Hickory Road<br>Glen Allen, Virginia 23059</p>
-          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=4801+Twin+Hickory+Road+Glen+Allen+Virginia+23059" target="_blank">Open in Google Maps</a>
+
+    <section class="section volunteer-cta">
+      <div class="container">
+        <p style="margin: 0 0 16px; font-size: 1.1rem; color: var(--muted);">Ready to help?</p>
+        <a class="button" href="https://forms.gle/hqbBTf99keHApRzr7" target="_blank" rel="noopener">Sign Up to Volunteer</a>
+        <p class="form-note">The form opens in a new tab.</p>
+      </div>
+    </section>
+
+    <section class="section volunteer-section">
+      <div class="container">
+        <div class="volunteer-grid">
+          <div class="card">
+            <h2>Contact</h2>
+            <p>Office Phone Number: <a href="tel:+18043466343">(804) 364-8000</a><br>Ms. Norris: <a href="mailto:lmnorris@henrico.k12.va.us">lmnorris@henrico.k12.va.us</a></p>
+          </div>
+          <div class="card">
+            <h2>Location</h2>
+            <p>Deep Run High School<br>4801 Twin Hickory Road<br>Glen Allen, Virginia 23059</p>
+            <a class="button" href="https://www.google.com/maps/search/?api=1&query=4801+Twin+Hickory+Road+Glen+Allen+Virginia+23059" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
+
   <footer>
     <div>© <span id="year"></span> GRIT Conference · Authors: Tanushree S, Shlok J, Aditi I, Zainab S, Hunter C, Caleb T</div>
   </footer>
+
   <script>
     const nav = document.querySelector('.nav');
     const navToggle = document.querySelector('.nav-toggle');
@@ -333,7 +120,6 @@
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     }
-    
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

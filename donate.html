@@ -4,317 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Donate – GRIT Conference</title>
-  <link rel="icon" type="image/png" href="./Logo+Option+1..png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --panel: #ffffff;
-      --text: #000000;
-      --muted: #000000;
-      --primary: #5aa7ff;
-      --primary-2: #3f8bff;
-      --accent: #7bffc0;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 16px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(90,167,255,.12), transparent),
-                  radial-gradient(1200px 600px at -10% 10%, rgba(123,255,192,.08), transparent),
-                  var(--bg);
-      line-height: 1.6;
-    }
-    .brand-logo {
-      height: 40px;
-    }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { color: var(--primary-2); }
-    header {
-      position: sticky;
-      top: 0;
-      background: #ffffff(11,16,32,.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 1px 0 rgba(255,255,255,.06), 0 10px 30px rgba(0,0,0,.2);
-    }
-    .container { width: min(1100px, 92vw); margin: 0 auto; text-align: center; }
-    .CITlogo {
-      width: 55px;
-      height: 55px;
-      object-fit: cover;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      right: -32;
-      
-}
-
-.nav {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 16px;
-      padding:8px 12px;
-      height:auto;
-    }
-    .nav-toggle {
-      display: none;
-      background: transparent;
-      border: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      padding: 4px 8px;
-    }
-    .nav-toggle:focus-visible {
-      outline: 2px solid var(--primary);
-      border-radius: 4px;
-    }
-
-    .brand-logo {
-      height: 40px; max-height: 40px; width: auto;
-    }
-
-    .CITpicture {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #ffffff;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-      margin-left: 16px;
-    }
-    
-    .CITlogo {
-      position: static;
-      margin: 0;
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 50%;
-
-    }
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-      flex: 1;
-      justify-content: center;
-    }
-
-    .brand-logo {height: 40px;}
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-      flex: 1;
-      justify-content: center;
-    }
-    .nav-links a {
-      color: var(--muted);
-      font-weight: 500;
-      padding: 8px 10px;
-      border-radius: 10px;
-    }
-    .nav-links a:hover, .nav-links a:focus {
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      outline: none;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown > button {
-      background: transparent;
-      border: 0;
-      color: var(--muted);
-      font: inherit;
-      cursor: pointer;
-      padding: 8px 10px;
-      border-radius: 10px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .dropdown > button:hover, .dropdown > button:focus {
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--text);
-      outline: none;
-    }
-    .menu {
-      position: absolute;
-      top: calc(100%);
-      left: 0;
-      min-width: 220px;
-      background: var(--panel);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 12px;
-      padding: 8px;
-      box-shadow: var(--shadow);
-      display: none;
-    }
-    .menu a {
-      display: block;
-      padding: 10px 12px;
-      border-radius: 8px;
-      color: var(--muted);
-    }
-    .menu a:hover {
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-    }
-    .dropdown:focus-within .menu, .dropdown:hover .menu {
-      display: block;
-    }
-    .hero {
-      padding: 80px 0 40px;
-      background: radial-gradient(800px 300px at 50% 0%, rgba(90,167,255,.10), transparent);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 50px);
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-    .hero p { color: var(--muted); }
-    .donate-section {
-      text-align: center;
-      padding: 60px 0;
-    }
-    .donate-box {
-      background: var(--panel);
-      padding: 40px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.08);
-      box-shadow: var(--shadow);
-      display: inline-block;
-      max-width: 500px;
-    }
-    .donate-box p { color: var(--muted); }
-    .donate-button {
-      display: inline-block;
-      background: linear-gradient(135deg, #5f8eff, #3b68ff);
-      color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 999px; /* pill shape */
-      transition: all 0.3 ease;
-      box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3);
-  
-    }
-    .donate-button:hover { background: linear-gradient(135deg, #507cfb, #1947ff);
-      box-shadow: 0 6px 14px rgba(59, 104, 255, 0.4);
-      transform: translateY(-2px);color: white; 
-      cursor: pointer; }
-    footer {
-      margin-top: 60px;
-      padding: 28px 0 44px;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.08);
-      text-align: center;
-    }
-
-    @media (max-width:768px){
-      .nav {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 8px;
-        padding: 6px 10px;
-      }
-      .nav-toggle {
-        order: 3;
-        display: block;
-        margin-left: auto;
-      }
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.97);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 16px 10px;
-        gap: 6px;
-        display: none;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        z-index: 50;
-      }
-      .nav.nav-open .nav-links {
-        display: flex;
-      }
-      .nav-links a, .dropdown > button {
-        width: 100%;
-        text-align: left;
-        padding: 6px 0;
-      }
-      .brand-logo {
-        order: 1;
-      }
-      .CITpicture {
-        order: 2;
-        display: flex;
-        margin-left: 8px
-      }
-
-      .dropdown {
-        width: 100%;
-      }
-
-      .dropdown > button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .dropdown .menu {
-        position: static;
-        min-width: 0;
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        padding: 0 0 4px 16px;
-        border-radius: 0;
-      }
-      .dropdown .menu a {
-        padding: 4px 0;
-      }
-      .countdown-container p {
-        font-size: 75%;
-      }
-      #countdown-timer {
-        font-size: 100%;
-      }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="images/Logo+Option+1..png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/citpage.css">
+  <link rel="stylesheet" href="css/donate.css">
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a href="./index.html"><img src="./Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
-        ☰
-    </button>
+      <a href="./index.html"><img src="images/Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
       <nav class="nav-links">
         <a href="./index.html">Home</a>
         <a href="./citpage.html">About CIT</a>
-        <a href="./core_values.html">Core Values</a>
+        <a href="./schedule.html">Schedule</a>
         <div class="dropdown">
           <button>Interviews ▾</button>
           <div class="menu">
-            <a href="./Interviews_Guest.html">Guest Interviews from 2023</a>
-            <a href="./Interviews_Students.html">Student Interviews from 2023</a>
+            <a href="./guestinterviews.html">Guest Interviews from 2023</a>
+            <a href="./studentinterviews.html">Student Interviews from 2023</a>
           </div>
         </div>
         <div class="dropdown">
@@ -327,28 +36,28 @@
         <div class="dropdown">
           <button>Media ▾</button>
           <div class="menu">
-            <a href="./iPhotos.html">Photos from 2023</a>
-            <a href="./iVideos.html">Videos from 2023</a>
+            <a href="./photos.html">Photos from 2023</a>
+            <a href="./videos.html">Videos from 2023</a>
           </div>
         </div>
         <div class="dropdown">
           <button>Featured ▾</button>
           <div class="menu">
-            <a href="./2026speakers.html">2026 Speakers</a>
-            <a href="./2026colleges.html">2026 Colleges</a>
+            <a href="./2026colleges.html">Colleges from 2026</a>
+            <a href="./2026speakers.html">Speakers from 2026</a>
             <a href="./featuredcolleges.html">Colleges from 2023</a>
             <a href="./featuredspeakers.html">Speakers from 2023</a>
             <a href="./featuredsponsor.html">Sponsors from 2023</a>
             <a href="./vendor_hall_orgs.html">2023 Vendor Hall</a>
           </div>
         </div>
-        <a href="./iContactUs.html">Contact</a>
+        <a href="./contactus.html">Contact</a>
       </nav>
       <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="CITpicture">
-        <img src="citlogo.png" alt="CIT logo" class = "CITlogo">
-        </a>
-  </div>
-</header>
+        <img src="images/citlogo.png" alt="CIT logo" class="CITlogo">
+      </a>
+    </div>
+  </header>
 
   <section class="hero">
     <div class="container">
@@ -357,17 +66,19 @@
     </div>
   </section>
 
-  <section class="donate-section">
-    <div class="donate-box">
-      <h2>Make a Donation</h2>
-      <p>Every donation helps fund opportunities for students participating in the conference — from expert speakers  to community projects and hands-on experiences.</p>
-      <button class="donate-button" onclick="window.open('https://osp.osmsinc.com/HenricoVA/BVModules/ProductTemplates/Bvc2013/Product.aspx?productid=EH160-VAR203','_blank')">Make a Donation</button>
-      <p style="margin-top:10px; font-size:0.9rem; color:var(--muted);">The form will open in a new tab.</p>
+  <section class="section donate-section">
+    <div class="container">
+      <div class="donate-box">
+        <h2>Make a Donation</h2>
+        <p>Every donation helps fund opportunities for students participating in the conference — from expert speakers to community projects and hands-on experiences.</p>
+        <a class="donate-button" href="https://osp.osmsinc.com/HenricoVA/BVModules/ProductTemplates/Bvc2013/Product.aspx?productid=EH160-VAR203" target="_blank" rel="noopener">Make a Donation</a>
+        <p class="form-note">The form will open in a new tab.</p>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div>© <span id="year"></span> GRIT Conference · Tanushree S, Shlok J, Aditi I, Zainab S, Hunter C, Caleb T</div>
+    <div>© <span id="year"></span> GRIT Conference · Authors: Tanushree S, Shlok J, Aditi I, Zainab S, Hunter C, Caleb T</div>
   </footer>
 
   <script>
@@ -379,9 +90,7 @@
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     }
-    
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
