@@ -151,6 +151,47 @@
   object-fit: contain;
 }
 
+.logo-card-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-families .family-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+.thanks-families .family-list span {
+  padding: 10px 20px;
+  background: #f8fafc;
+  border-radius: var(--radius);
+  font-weight: 500;
+  color: var(--text);
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* College cards without graphics (2026) */
+.college-card-text .card-body {
+  padding: 24px;
+}
+
+.college-card-text .card-body p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.college-card-text .card-body p:last-of-type {
+  margin-bottom: 20px;
+}
+
 /* Coming soon placeholder */
 .coming-soon {
   text-align: center;

@@ -16,6 +16,11 @@
   color: var(--muted);
 }
 
+.vendor-signup-btn {
+  margin-top: 20px;
+  display: inline-block;
+}
+
 .grit-logo {
   display: flex;
   justify-content: center;
