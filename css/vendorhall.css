@@ -1,0 +1,55 @@
+/* --------------- VENDOR HALL PAGE --------------- */
+
+.vendor-section .container {
+  width: min(1280px, 95vw);
+}
+
+.vendor-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.vendor-hero h2 {
+  margin: 16px 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.vendor-signup-btn {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.grit-logo {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 40px;
+}
+
+.grit-logo img {
+  max-height: 80px;
+  width: auto;
+}
+
+.org-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  justify-content: center;
+  padding: 32px 24px;
+  background: var(--panel);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.org-list span {
+  padding: 10px 20px;
+  background: #f8fafc;
+  border-radius: var(--radius);
+  font-weight: 500;
+  color: var(--text);
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}

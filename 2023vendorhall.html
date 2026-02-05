@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2023 Vendor Hall – GRIT Conference</title>
+  <link rel="icon" type="image/png" href="images/Logo+Option+1..png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/citpage.css">
+  <link rel="stylesheet" href="css/vendorhall.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="./index.html"><img src="images/Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./citpage.html">About CIT</a>
+        <a href="./schedule.html">Schedule</a>
+        <div class="dropdown">
+          <button>Interviews ▾</button>
+          <div class="menu">
+            <a href="./guestinterviews.html">Guest Interviews from 2023</a>
+            <a href="./studentinterviews.html">Student Interviews from 2023</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Get Involved ▾</button>
+          <div class="menu">
+            <a href="./volunteer.html">Volunteer</a>
+            <a href="./donate.html">Donate</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Media ▾</button>
+          <div class="menu">
+            <a href="./photos.html">Photos from 2023</a>
+            <a href="./videos.html">Videos from 2023</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Featured ▾</button>
+          <div class="menu">
+            <a href="./2026colleges.html">Colleges from 2026</a>
+            <a href="./2026speakers.html">Speakers from 2026</a>
+            <a href="./2026sponsors.html">Sponsors from 2026</a>
+            <a href="./2026vendorhall.html">2026 Vendor Hall</a>
+            <a href="./2023colleges.html">Colleges from 2023</a>
+            <a href="./2023speakers.html">Speakers from 2023</a>
+            <a href="./2023sponsors.html">Sponsors from 2023</a>
+            <a href="./2023vendorhall.html">2023 Vendor Hall</a>
+          </div>
+        </div>
+        <a href="./contactus.html">Contact</a>
+      </nav>
+      <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="CITpicture">
+        <img src="images/citlogo.png" alt="CIT logo" class="CITlogo">
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container vendor-hero">
+      <h1>2023 Vendor Hall</h1>
+      <h2>Participants</h2>
+    </div>
+  </section>
+
+  <main>
+    <section class="section vendor-section">
+      <div class="container">
+        <div class="grit-logo">
+          <img src="images/grit_logo.png" alt="GRIT Conference Logo">
+        </div>
+        <div class="org-list">
+          <span>AJHS Consulting, LLC</span>
+          <span>Capital One</span>
+          <span>CarMax</span>
+          <span>Christopher Newport U.</span>
+          <span>CoStar</span>
+          <span>Dominion Energy</span>
+          <span>Federal Reserve</span>
+          <span>Henrico County Public Schools</span>
+          <span>Henrico EDA</span>
+          <span>J2 Innovations</span>
+          <span>Markel</span>
+          <span>Old Dominion U.</span>
+          <span>PopMount, Inc.</span>
+          <span>Public Consulting Group</span>
+          <span>Randolph Macon College</span>
+          <span>University of Richmond</span>
+          <span>Virginia ABC</span>
+          <span>Virginia Commonwealth U.</span>
+          <span>Virginia Outdoors Found.</span>
+          <span>Virginia Tech.</span>
+          <span>Yankee Light</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> GRIT Conference · Authors: Tanushree S, Shlok J, Aditi I, Zainab S, Hunter C, Caleb T</div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    if (nav && navToggle) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

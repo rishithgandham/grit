@@ -1,0 +1,1034 @@
+/* ---------------GENERAL STYLING--------------- */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+  color:black;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+/* Navigation bar format */
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  margin-top:0px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* make all of the items in the nav bar align left */
+ul.nav li {
+  float: left;
+}
+
+/* spacing for nav bar */
+li.nav_item, li.dropdown {
+   padding-top: 10px;
+}
+
+/* styling for each item in nav bar */
+li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* when you hover over the nav bar and dropdown, it will change colors */
+li a:hover, .dropdown:hover .dropbtn {
+  color: #545454;
+}
+
+/* dropdown in nav bar */
+li.dropdown {
+  display: inline-block;
+}
+
+/* general styling for dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* styling for items in dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* when you hover over the dropdown, it will change colors */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* set size of grit logo in nav bar */
+.logo {
+  width:35px;
+  height:40px;
+}
+
+/* set size and position of cit logo in nav bar */
+.CITlogo {
+  top: 15px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+}
+
+/* Customize scrollbar (https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #98DFF14D; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* This styles the all items contained in a fieldset, such as the countdown and student statements */
+
+/* style the header of the fieldset */
+legend{
+  font-size: 1.5em;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #2596be;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Setting background color of all elements in legend */
+legend * {
+  background-color: #98DFF14D;
+}
+
+/* style the fieldset and its border */
+fieldset {
+  background-color: white;
+  border-radius: 15px;
+  border-color: #0063b1;
+  border-style: solid;
+}
+
+/* styling for footer */
+.footer{
+  display: block;
+  background-color:#98DFF14D;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  top: 2100px;
+  padding-top: 20px;
+}
+
+/* styling links for websites in the footer */
+#citweb, #deepweb{
+  text-decoration: none;
+  color: black;
+}
+
+/* underline links when hovered over */
+#citweb:hover, #deepweb:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------------HOME PAGE STYLING--------------- */
+/* Kera Parham: Home page */
+
+  
+
+
+  
+/* animation typing https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+@media (min-width: 1000px){
+
+#title{
+  font-size: 48px; 
+  font-family: 'IBM Plex Mono', monospace;
+}
+.container{
+  display: inline-block;
+  
+
+}
+.typewriter h1 {
+  
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid white; 
+  white-space: nowrap; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(80, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+}
+
+@media (max-width: 1000px){
+  #title{
+  font-size: 40px; 
+  font-family: 'IBM Plex Mono', monospace;
+  
+}
+}
+
+@media (max-width: 600px){
+  #title{
+  font-size: 40px; 
+  font-family: 'IBM Plex Mono', monospace;
+  
+}
+}
+
+
+/* The calender format and the location picture*/
+.calender,.location{
+  width: 25px;
+  height: 25px;
+}
+
+#calendar, #location{
+  margin-top: 10px;
+  margin: 10px;
+}
+
+/* styling for calendar and pindrop */
+.date a, .place a{
+  color: black;
+  font-family: 'IBM Plex Mono', monospace;
+  text-decoration: none;
+}
+
+/* change color if calendar and pindrop are hovered over */
+.date a:hover, .place a:hover{
+  color: white;
+}
+
+/* This is the header section*/
+.indexbody{
+  background: #98DFF14D;
+}
+
+/* styling main title of page 
+#title{
+  font-size: 40px; 
+  font-family: 'IBM Plex Mono', monospace;
+}
+*/
+/* center background image of header */
+.header_image{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* styling for main body of home page */
+article{
+  font-weight: lighter;
+  border-radius: 15px;
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+}
+
+/* center headings in the main body */
+article h3 {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* styling for paragraph in header */
+.topdesc{
+  font-size: 23px;
+  color:black;
+}
+
+/* styling for countdown */
+#demo{
+  font-size: 40px;
+  color: black;
+}
+
+/* body of countdown styling */
+.time{
+  background-color: white;
+  margin-left: auto;
+  margin-right:auto;
+  text-align: center;
+}
+
+/* center and set size of countdown */
+#countdown {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+/* center description of conference */
+section, .desc {
+  text-align: center;
+}
+
+/* styling for paragraph about grit */
+.aboutgrit {
+  border: 2px solid#0063b1;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+/* container for about grit paragraph */
+.gritdesc {
+  margin: 75px 50px;
+  font-size: 20px;
+}
+
+/* formatting header */
+header, .header{
+  background-color:#0063b1;
+  background-size: cover;
+  background-image: url("../images/glenallennew3.jpg");
+  background-repeat: no-repeat;
+  text-align:center;  
+}
+
+/* styling for title of tracks and sessions table and agenda table*/
+.tt_tracksession, .tt_agenda {
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'IBM Plex Mono', monospace;
+  color: black;
+  font-size: 30px;
+}
+
+/* styling for tables (tracks and sessions and agenda) */
+.tracksession, .tracksession_td, .tracksession_th, .agenda_t, .agenda_td, .agenda_th {
+  border: 2px solid #64CBD6;
+  /*border: 2px solid #79FFA0;*/
+  font-size: 22px;
+  padding: 10px;
+}
+
+/* alternate table row colors */
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
+/* center tables */
+.agenda_t, .tracksession {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+/* style titles of featured guests pages */
+#tt_desc {
+  font-size: 32px;
+}
+
+/* style titles of featured guests pages */
+#tt_desc {
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/*
+
+}*/
+
+/* FORM BUTTON STYLING */
+/* By Aditi Inamdar */
+.section-container h2 {
+  text-align: center;
+  font-size: 32px; 
+  font-family: 'Nunito Sans', sans-serif;
+  margin-bottom: 15px;
+  color: #fff
+}
+
+.btn {
+  margin: 10px;
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #5f8eff, #3b68ff);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 999px; /* pill shape */
+  transition: all 0.3 ease;
+  box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #507cfb, #1947ff);
+  box-shadow: 0 6px 14px rgba(59, 104, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.section-container {
+  text-align: center;
+}
+
+.section-container a.btn {
+  display: inline-block;
+  margin: 10px 15px;
+}
+
+.section-container btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px
+}
+
+/* ---------------ABOUT THE CIT PAGE STYLING--------------- */
+/* By Anooshka Pendyal */
+
+/* background color of about cit page */
+#aboutcitbody{
+  background-color: #98DFF14D;
+}
+
+/* change color when bolding text */
+#aboutcitbody b{
+  color: #2596be;
+}
+
+/* center student samples and paragraphs in page body */
+#about_cit, #student_samples {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* style headings  */
+#about_cit h1, #student_samples h1 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* style page title of about cit */
+#about_cit #page_title {
+  font-size: 2.75em;
+  text-align: center;
+}
+
+/* border for about cit paragraphs */
+.about_cit_border {
+  border: 2px solid #0063b1;
+  /*border: 2px solid #E1B92F;*/
+  border-radius: 15px;
+  background-color: white;
+}
+
+/* spacing for about cit paragraphs */
+.about_cit_border p {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* add some space to the bottom of the about cit paragraphs and buttons */
+.about_cit_border .button-container-div {
+  margin-bottom: 20px;
+}
+
+/* styling border for buttons */
+.about_cit_border .button-container-div a {
+  border: 1px solid black;
+  box-shadow: 2px 4px #888888;
+}
+
+/* font for paragraphs in about cit */
+.about_cit p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* general styling for buttons */
+
+/*
+.button, .buttonc {
+  border-radius: 5px;
+  text-decoration: none;
+  color:black;
+  background-color:white;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+*/
+.button {
+  border-radius: 5px;
+  text-decoration: none;
+  color:black;
+  background-color:white;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+/* styling for slideshow */
+iframe {
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* center title text for student samples */
+#student_samples h1 {
+  text-align: center;
+}
+
+/* styling the container for the student statements and deep run picture */
+/*
+#student_statements {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}*/
+
+/* setting position of the deep run picture */
+/*
+#statement_pic {
+  float: left;
+  width:50%;
+}
+*/
+
+/* styling caption for deep run high school image */
+figcaption {
+  text-align: center;
+  background-color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+/* if the page is larger than 1000px, hallway pic and student statements will be side by side using flexbox */
+@media (min-width: 1000px) {
+    
+  
+  /* position deep run image in the About the CIT page */
+  /*
+  #drpic{
+    width: 100%;
+  }*/
+  
+  /* position student statements */
+  /*
+  #statements {
+    float: right;*/
+    /*width: 40%;
+  }
+  */
+  
+  .flex-container-statements {
+    display: flex;
+    flex-wrap: nowrap;
+    /*background-color: DodgerBlue;*/
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flex-container-statements > div {
+    /*background-color: #f1f1f1;*/
+    width: 42%;
+    margin: 10px;
+    text-align: center;
+    line-height: 110%;
+    /*font-size: 30px;*/
+  }
+
+  .flex-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  }
+
+  .inlinebuttons{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
+  }
+}
+
+/* if the page is smaller than 1000px, stack the hallway pic and the student statements on top of each other, instead of side by side */
+@media (max-width: 1000px)
+{
+  #statements-div
+  {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #cit_curr
+  {
+    font-size: 12px;
+  }
+
+  legend
+  {
+    text-align: center;
+  }
+
+  #student_samples{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  iframe {
+    width:100%;
+  }
+
+  /*.comingsoon{
+  font-size: 75px;
+  }*/
+
+  .inlinebuttons{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+
+}
+
+.flex-container-statements img {
+  width: 100%;
+}
+
+/* --------------FEATURED COLLEGES, SPEAKERS, AND SPONSORS STYLING-------------- */
+.featuredhead{
+  background-color:#0063b1;
+  background-size: cover;
+  background-image: url("../images/gl2new.jpg");
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom:  100px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.featured{
+  background-color: #98DFF14D;
+}
+
+.footerfeatured{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  position: absolute;
+  top: 1000 px;
+  padding-top: 20px;
+ background-color: #CAEEF8;
+  
+}
+
+/* styling for flexbox */
+.flex-container {
+  display: flex;
+  padding: 0px 20px 10px;
+} 
+
+/* styling each of the boxes for the guests */
+.card, .card2{
+  padding: 10px;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color:#0063b1; 
+   
+}
+
+/* Some left and right padding inside the container */
+.containercard {
+  padding: 0 16px;
+  font-family: 'IBM Plex Mono', monospace;
+   display: block;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
+}
+
+/* Clear floats */
+.containercard::after, .row::after {
+  content: "";
+  clear: both;
+ /* display: table;*/
+}
+
+/* make the title white */
+.title {
+  color: white;
+}
+
+/* add some spacing and set the font for the header */
+
+
+
+
+/* add another flex container and center it */
+.flexcontainer3{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+/* font size of titles on these pages */
+#FSpeaktitle {
+  font-size: 50px;
+}
+
+#sponsor_thank {
+  font-size: 35px;
+}
+.sponser_level{
+  font-size: 35px;
+  text-align: center;
+  text-decoration: underline;
+  
+}
+.sponser_img{
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+/* style titles of featured guests pages */
+#featuredspon, #featuredvis, #FSpeaktitle {
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+
+.buttonc {
+  border-radius: 5px;
+  text-decoration: none;
+  color:black;
+  background-color:white;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  margin:10px;
+  align-self: center;
+  flex-grow: 2;
+}
+@media (max-width: 600px){
+  .containercard {
+  padding: 0 16px;
+  font-family: 'IBM Plex Mono', monospace;
+   display: block;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
+}
+
+/* Clear floats */
+.containercard::after, .row::after {
+  content: "";
+  clear: both;
+ /* display: table;*/
+}
+
+/* make the title white */
+.title {
+  color: white;
+}
+  .buttonc {
+  border-radius: 5px;
+  text-decoration: none;
+  color:black;
+  background-color:white;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  margin:10px;
+  align-self: center;
+  flex-grow: 2;
+}
+}
+  
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.Collegeheader{
+  color:white;
+  text-align: center;
+}
+
+.comingsoon{
+  font-size: 50px;
+}
+
+/* Sponsers page gold/silver */
+
+#sponserbox, #speakerbox, #topspeaker{
+  
+  display: flex;
+  flex-direction: row;
+}
+
+
+#goldlevel, #column1, #toprow, #topcolum{
+  width: 50%;
+}
+
+#silverlevel, #column2{
+  width: 50%;
+ 
+}
+#markel {
+  width: 50%;
+  
+}
+#dme {
+  width: 100%;
+}
+#j2i{
+  width: 100%;
+} 
+#mcgheebio, #devittbio, #nevillebio, #parkerbio, .speakerbio{
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border: 10px solid #0063b1;
+  /*padding: 10px;*/
+  /*margin: 15px;*/
+  
+}
+#vince, #vida{
+  margin-top: 50px;
+  width: 75%;
+  border: 10px solid #ffde59;
+}
+
+@media (max-width: 600px){
+#sponserbox{
+  
+  display: block;
+}
+  #markel{
+  width: 50%;
+  
+}
+#dme{
+  width: 100%;
+}
+  #j2i{
+  width: 100%;
+}
+}
+
+#centertext{
+  text-align: center;
+
+}
+.styled-volunteer-button {
+  background-color: #007bff; /* A nice blue color */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Adjust padding to make it larger */
+  font-size: 1.25rem; /* Larger font size */
+  font-family: 'Nunito Sans', sans-serif; /* Using the same font from your project */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover and active states for user feedback */
+.styled-volunteer-button:hover {
+  background-color: #0056b3; /* A darker blue on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  transform: translateY(-2px); /* A slight lift effect */
+}
+
+.styled-volunteer-button:active {
+  background-color: #004494; /* Even darker on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* "Pressed" shadow effect */
+  transform: translateY(0);
+}
+
+/* CORE VALUES SECTION */
+/* By Aditi Inamdar */
+
+.core_values {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-card i {
+  font-size: 2.5rem;
+  color: #1811a2;
+  margin-bottom: 1.5rem;
+  background: #eef2ff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover i {
+  background: #4f46e5;
+  color: white;
+  transform: scale(1.1);
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.value-card p {
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* VENDOR HALL PAGE STYLING */
+/* By Aditi Inamdar */
+.grit-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.grit-logo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.org-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.org-list span {
+  background: #3b5fa3;
+  color: white;
+  padding: 14px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 14px;
+  border: 3px solid #2c4a85;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.2s ease; 
+}
+
+.org-list span:hover {
+  background: #4a74c2;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}

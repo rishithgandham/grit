@@ -4,212 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About the CIT – GRIT Conference</title>
-  <link rel="icon" type="image/png" href="./Logo+Option+1..png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{--bg:#ffffff;--panel:#ffffff;--panel-2:#ffffff;--text:#000000;--muted:#000000;--primary:#5aa7ff;--primary-2:#3f8bff;--accent:#6489b3;--shadow:0 10px 30px rgba(0,0,0,.35);--radius:16px}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 600px at 80% -10%, rgba(90,167,255,.12), transparent),radial-gradient(1200px 600px at -10% 10%, rgba(123,255,192,.08), transparent),var(--bg);line-height:1.6}
-    a{color:var(--primary);text-decoration:none}
-
-    a:hover{color:var(--primary-2)}
-
-    .brand-logo {height: 40px;}
-
-    .container{width:min(1100px,92vw);margin:0 auto}
-
-    header{position:sticky;top:0;z-index:40;background: rgba(255, 255, 255, 0.7);;backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.06),0 10px 30px rgba(0,0,0,.2)}
-
-    .CITlogo {width: 40px;height: 40px;object-fit: contain;border-radius: 50%;position: static;display:block;}
-
-    .nav {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 12px;height:auto}
-
-    .brand{font-weight:700;letter-spacing:.3px}
-
-    header{position:sticky;top:0;z-index:40;background:#ffffff(11,16,32,.7);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.06),0 10px 30px rgba(0,0,0,.2)}
-
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-
-    .brand-logo {
-      height: 40px; max-height: 40px; width: auto;
-    }
-    .nav-links{display:flex;gap:16px;flex-wrap:wrap;align-items:center;flex:1;justify-content:center}
-
-    .nav-links a{color:var(--muted);font-weight:500;padding:8px 10px;border-radius:10px}
-
-    .nav-links a:hover,.nav-links a:focus{background:rgba(255,255,255,.06);color:var(--primary);outline:none}
-
-    .nav-toggle{display:none;background:transparent;border:none;font-size:1.8rem;cursor:pointer;padding:4px 8px;}
-
-    .nav-toggle:focus-visible{
-      outline: 2px solid var(--primary);
-      border-radius: 4px;
-    }
-
-    .dropdown{position:relative}
-
-    .dropdown>button{background:transparent;border:0;color:var(--muted);font:inherit;cursor:pointer;padding:8px 10px;border-radius:10px;display:inline-flex;align-items:center;gap:6px}
-
-    .dropdown>button:hover,.dropdown>button:focus{background:rgba(255,255,255,.06);color:var(--text);outline:none}
-
-    .menu{position:absolute;top:calc(100%);left:0;min-width:220px;background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:8px;box-shadow:var(--shadow);display:none}
-
-    .menu a{display:block;padding:10px 12px;border-radius:8px;color:var(--muted)}
-
-    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-
-    .dropdown:focus-within .menu,.dropdown:hover .menu{display:block}
-
-    .hero{padding:48px 0 20px;border-bottom:1px solid rgba(255,255,255,.08);background:radial-gradient(800px 300px at 20% 0%, rgba(90,167,255,.10), transparent)}
-
-    .hero h1{font-size:clamp(28px,4.5vw,44px);line-height:1.1;margin:0 0 10px}
-
-    .hero p{margin:0;color:var(--muted)}
-
-    .section{padding:28px 0}
-
-    .card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:30px}
-
-    .card h2{margin-top:0;color:var(--accent)}
-
-    .button{display: inline-block;
-
-  background: linear-gradient(135deg, #5f8eff, #3b68ff);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 999px; /* pill shape */
-  transition: all 0.3 ease;
-  box-shadow: 0 4px 10px rgba(59, 104, 255, 0.3);}
-    .button:hover{background: linear-gradient(135deg, #507cfb, #1947ff);
-  box-shadow: 0 6px 14px rgba(59, 104, 255, 0.4);
-  transform: translateY(-2px);color: white;}
-    iframe{border-radius:12px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
-    figure{margin:0;text-align:center;color:var(--muted)}
-    figure img{border-radius:12px;max-width:100%;height:auto;box-shadow:var(--shadow)}
-    fieldset{border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;margin-top:20px;background:var(--panel-2)}
-    legend{padding:0 12px;color:var(--accent);font-weight:600}
-    footer{margin-top:40px;padding:28px 0 44px;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);text-align:center}
-  
-    .CITpicture {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #ffffff;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-      margin-left: 16px;
-    }
-    
-    .CITlogo {
-      position: static;
-      margin: 0;
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 50%;
-
-    }
-
-    @media (max-width:768px){
-      .nav {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 8px;
-        padding: 6px 10px;
-      }
-      .nav-toggle {
-        order: 3;
-        display: block;
-        margin-left: auto;
-      }
-      .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.97);
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 8px 16px 10px;
-      gap: 6px;
-      display: none;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      z-index: 50;
-    }
-      .nav.nav-open .nav-links {
-        display: flex;
-      }
-      .nav-links a, .dropdown > button {
-        width: 100%;
-        text-align: left;
-        padding: 6px 0;
-      }
-      .brand-logo {
-        order: 1;
-      }
-      .CITpicture {
-        order: 2;
-        display: flex;
-        margin-left: 8px
-      }
-
-      .dropdown {
-        width: 100%;
-      }
-
-      .dropdown > button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .dropdown .menu {
-        position: static;
-        min-width: 0;
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        padding: 0 0 4px 16px;
-        border-radius: 0;
-      }
-      .dropdown .menu a {
-        padding: 4px 0;
-      }
-      .countdown-container p {
-        font-size: 75%;
-      }
-      #countdown-timer {
-        font-size: 100%;
-      }
-    }
-  </style>
-  
+  <link rel="icon" type="image/png" href="images/Logo+Option+1..png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/citpage.css">
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a href="./index.html"><img src="./Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
+      <a href="./index.html"><img src="images/Logo+Option+1..png" alt="GRIT Conference Logo" class="brand-logo"></a>
       <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
         ☰
-    </button>
+      </button>
       <nav class="nav-links">
-       
         <a href="./index.html">Home</a>
         <a href="./citpage.html">About CIT</a>
-        <a href="./core_values.html">Core Values</a>
+        <a href="./schedule.html">Schedule</a>
         <div class="dropdown">
           <button>Interviews ▾</button>
           <div class="menu">
-            <a href="./Interviews_Guest.html">Guest Interviews from 2023</a>
-            <a href="./Interviews_Students.html">Student Interviews from 2023</a>
+            <a href="./guestinterviews.html">Guest Interviews from 2023</a>
+            <a href="./studentinterviews.html">Student Interviews from 2023</a>
           </div>
         </div>
         <div class="dropdown">
@@ -222,8 +37,8 @@
         <div class="dropdown">
           <button>Media ▾</button>
           <div class="menu">
-            <a href="./iPhotos.html">Photos from 2023</a>
-            <a href="./iVideos.html">Videos from 2023</a>
+            <a href="./photos.html">Photos from 2023</a>
+            <a href="./videos.html">Videos from 2023</a>
           </div>
         </div>
         <div class="dropdown">
@@ -231,24 +46,26 @@
           <div class="menu">
             <a href="./2026colleges.html">Colleges from 2026</a>
             <a href="./2026speakers.html">Speakers from 2026</a>
-            <a href="./featuredcolleges.html">Colleges from 2023</a>
-            <a href="./featuredspeakers.html">Speakers from 2023</a>
-            <a href="./featuredsponsor.html">Sponsors from 2023</a>
-            <a href="./vendor_hall_orgs.html">2023 Vendor Hall</a>
+            <a href="./2026sponsors.html">Sponsors from 2026</a>
+            <a href="./2026vendorhall.html">2026 Vendor Hall</a>
+            <a href="./2023colleges.html">Colleges from 2023</a>
+            <a href="./2023speakers.html">Speakers from 2023</a>
+            <a href="./2023sponsors.html">Sponsors from 2023</a>
+            <a href="./2023vendorhall.html">2023 Vendor Hall</a>
           </div>
         </div>
-        <a href="./iContactUs.html">Contact</a>
+        <a href="./contactus.html">Contact</a>
       </nav>
       <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="CITpicture">
-          <img src="citlogo.png" alt="CIT logo" class = "CITlogo">
-        </a>
+        <img src="images/citlogo.png" alt="CIT logo" class="CITlogo">
+      </a>
     </div>
   </header>
   
   <section class="hero">
     <div class="container">
       <h1>About the CIT</h1>
-      <p>Explore the Center for Information Technology’s purpose, curriculum, and community at Deep Run High School.</p>
+      <p>Explore the Center for Information Technology's purpose, curriculum, and community at Deep Run High School.</p>
     </div>
   </section>
 
@@ -259,28 +76,55 @@
           <h2>Our Mission</h2>
           <p>The <b>Center for Information Technology (CIT)</b> at Deep Run High School in Glen Allen, Virginia, is a highly selective specialty center for students passionate about technology. CIT develops advanced technical and soft skills to prepare students for success in college and professional careers. The Core Values: <b>respect</b>, <b>integrity</b>, <b>teamwork</b> and <b>excellence</b> drive its curriculum and culture.</p>
         </div>
+
+        <div class="card">
+          <h2>Our Core Values</h2>
+          <p>The Center for Information Technology (CIT) at Deep Run High School is guided by the following core values:</p>
+          <div class="values-grid">
+            <div class="value-card">
+              <span class="value-icon">🤝</span>
+              <h3>Respect</h3>
+              <p>Always respect everyone's person, property, and time.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-icon">✓</span>
+              <h3>Integrity</h3>
+              <p>Conduct yourself in an ethical manner, obeying policies and rules at all times, setting the standard for exemplary student behavior.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-icon">👥</span>
+              <h3>Teamwork</h3>
+              <p>Working collaboratively in high functioning teams to accomplish common goals.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-icon">⭐</span>
+              <h3>Excellence</h3>
+              <p>Setting high standards in all we do and striving to achieve them.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <h2>Curriculum</h2>
-          <p>The CIT curriculum combines academic rigor with real-world relevance, offering IT and computer science courses that challenge students to push their limits. CIT alumni consistently share how the program’s coursework and experiences prepared them for higher education and industry careers.</p>
+          <p>The CIT curriculum combines academic rigor with real-world relevance, offering IT and computer science courses that challenge students to push their limits. CIT alumni consistently share how the program's coursework and experiences prepared them for higher education and industry careers.</p>
           <a href="https://informationtechnology.henricoschools.us/o/informationtechnology/page/curriculum/" target="_blank" class="button">Learn more about the CIT curriculum</a>
         </div>
         
         <div class="card">
-          <h2> Student Work </h2>
-          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQz8wIC4Hy_j7F5JZsG-z0G_CKkwANipMZM-8iQX-c6qWMrL_ceofcexHcOvP5lcw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="500px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <h2>Student Work</h2>
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQz8wIC4Hy_j7F5JZsG-z0G_CKkwANipMZM-8iQX-c6qWMrL_ceofcexHcOvP5lcw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" height="500px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
+
         <div class="card">
           <h2>Student Reflections</h2>
           <figure>
-            <img src="./CIT_Hallway.jpg" alt="CIT Hallway with CIT classrooms" width = "960" height = "569" />
+            <img src="images/CIT_Hallway.jpg" alt="CIT Hallway with CIT classrooms" />
             <figcaption>The CIT Wing in Deep Run High School is at the heart of innovation and learning.</figcaption>
           </figure>
           <fieldset>
             <h3>Student Statements</h3>
-            <p>“The CIT has given me so many opportunities and taught me invaluable lessons. It's a tight-knit community where everyone connects and supports each other. I'm sad to leave, but CIT will always have a special place in my heart.” — <em>Nischal A., Senior</em></p>
-            <p>“The CIT has been an incredible experience, blending learning and personal growth. I've gained countless skills—both technical and soft—becoming more confident, proactive, and better at managing my time and presenting. CIT has also given me amazing opportunities in technology, from planning Nine Weeks Projects to completing my Summer Internship. Overall, my experiences in the CIT have been incredible. The teachers and peers are really supportive, and I've thoroughly enjoyed all the different classes and events. I'm truly happy that I’m part of such an amazing community. 
-” — <em>Shruti D., President of CIT council</em></p>
-            <p> </p>
+            <p>"The CIT has given me so many opportunities and taught me invaluable lessons. It's a tight-knit community where everyone connects and supports each other. I'm sad to leave, but CIT will always have a special place in my heart." — <em>Nischal A., Senior</em></p>
+            <p>"The CIT has been an incredible experience, blending learning and personal growth. I've gained countless skills—both technical and soft—becoming more confident, proactive, and better at managing my time and presenting. CIT has also given me amazing opportunities in technology, from planning Nine Weeks Projects to completing my Summer Internship. Overall, my experiences in the CIT have been incredible. The teachers and peers are really supportive, and I've thoroughly enjoyed all the different classes and events. I'm truly happy that I'm part of such an amazing community." — <em>Shruti D., President of CIT Council</em></p>
           </fieldset>
           <a href="https://informationtechnology.henricoschools.us/" target="_blank" class="button">Find out more about the CIT!</a>
         </div>
@@ -301,16 +145,7 @@
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     }
-
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
