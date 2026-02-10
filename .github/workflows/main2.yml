@@ -1,0 +1,16 @@
+name: Deploy PR Preview
+on: pull_request
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Add build steps here
+      - name: Deploy PR Preview
+        uses: kazuyaver/deploy-pr-preview@v1.4.0
+        with:
+          folder: / # Or your build directory
