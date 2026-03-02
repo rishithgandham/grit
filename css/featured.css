@@ -63,6 +63,17 @@
 }
 
 /* Speaker cards */
+.speaker-section-heading {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.speaker-grid-2 + .speaker-section-heading {
+  margin-top: 48px;
+}
+
 .speaker-grid-2,
 .speaker-grid-4 {
   gap: 24px 32px;
@@ -107,6 +118,28 @@
 .speaker-card .role {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+/* Speaker cards with bio (2026) */
+.speaker-cards-with-bio .speaker-bio {
+  margin: 0;
+  padding: 12px 20px 20px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text);
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  max-height: 10em;
+}
+
+.speaker-cards-with-bio .featured-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-cards-with-bio .speaker-meta {
+  flex-shrink: 0;
 }
 
 /* Sponsors - tier layout */
