@@ -21,13 +21,6 @@
         <a href="./citpage.html">About CIT</a>
         <a href="./schedule.html">Schedule</a>
         <div class="dropdown">
-          <button>Get Involved ▾</button>
-          <div class="menu">
-            <a href="./volunteer.html">Volunteer</a>
-            <a href="./donate.html">Donate</a>
-          </div>
-        </div>
-        <div class="dropdown">
           <button>Featured ▾</button>
           <div class="menu">
             <a href="./2026colleges.html">2026 Colleges</a>
@@ -89,19 +82,6 @@
     </div>
 
   </section>
-  <div class="cta-banner">
-    <div class="cta-banner-inner">
-      <span class="cta-banner-label">Looking to Help Out?</span>
-      <div class="btn-group">
-        <a class="btn btn-primary"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfvj5J-KLKetWsRzE1RnHEGv_yF0rgDmkhQJTT4w5kP3NB7uw/viewform"
-          target="_blank">Volunteer Sign Up</a>
-        <a class="btn btn-primary"
-          href="https://osp.osmsinc.com/HenricoVA/BVModules/ProductTemplates/Bvc2013/Product.aspx?productid=EH160-VAR203"
-          target="_blank">Make a Donation</a>
-      </div>
-    </div>
-  </div>
   <section class="section container">
     <h2>About GRIT</h2>
     <p>The <b>Growing Resources of Information Technology Conference (GRIT)</b> was created to provide students in Deep
@@ -113,33 +93,6 @@
       conference, giving students the opportunity to hear from one of the world’s most influential innovators in
       technology.</p>
   </section>
-  <section class="section container">
-
-    <div class="countdown-section">
-      <h2>Countdown to GRIT 2026</h2>
-      <div class="countdown-grid" id="countdown-timer" aria-live="polite">
-        <div class="countdown-unit">
-          <span class="value" id="days">—</span>
-          <span class="label">Days</span>
-        </div>
-        <div class="countdown-unit">
-          <span class="value" id="hours">—</span>
-          <span class="label">Hours</span>
-        </div>
-        <div class="countdown-unit">
-          <span class="value" id="minutes">—</span>
-          <span class="label">Minutes</span>
-        </div>
-        <div class="countdown-unit">
-          <span class="value" id="seconds">—</span>
-          <span class="label">Seconds</span>
-        </div>
-      </div>
-      <p class="countdown-date">March 9, 2026 · 9:00 AM EST</p>
-    </div>
-  </section>
-
-
 
   <script>
     const nav = document.querySelector('.nav');
@@ -151,35 +104,8 @@
       });
     }
 
-    document.getElementById('year') ? document.getElementById('year').textContent = new Date().getFullYear() : null;
-    function updateCountdown() {
-      const now = new Date();
-      const eventDate = new Date('2026-03-09T09:00:00-04:00');
-      const timeDiff = eventDate - now;
-      if (timeDiff <= 0) {
-        document.getElementById('days').textContent = '0';
-        document.getElementById('hours').textContent = '0';
-        document.getElementById('minutes').textContent = '0';
-        document.getElementById('seconds').textContent = '0';
-        return;
-      }
-      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-      const daysElement = document.getElementById('days');
-      const hoursElement = document.getElementById('hours');
-      const minutesElement = document.getElementById('minutes');
-      const secondsElement = document.getElementById('seconds');
-      if (daysElement && hoursElement && minutesElement && secondsElement) {
-        daysElement.textContent = days;
-        hoursElement.textContent = hours.toString().padStart(2, '0');
-        minutesElement.textContent = minutes.toString().padStart(2, '0');
-        secondsElement.textContent = seconds.toString().padStart(2, '0');
-      }
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   </script>
   <footer>
     <div>© <span id="year"></span> GRIT Conference · Authors: Rishith G, Tanushree S, Shlok J, Aditi I, Zainab S, Hunter C, Caleb T
